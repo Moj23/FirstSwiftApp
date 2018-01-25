@@ -9,10 +9,24 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var FirstLabel: UILabel!
+    var tapeCount = 0
+    @IBAction func buttontap(_ sender: Any) {
+    tapeCount = tapeCount+1
+    print(tapeCount)
+        if tapeCount >= 10{
+            FirstLabel.text = " You tapped the button 10 times!"
+        }
+    }
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+       
     }
 
     override func didReceiveMemoryWarning() {
